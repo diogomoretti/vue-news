@@ -1,0 +1,89 @@
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --font-size-base: 1.6rem;
+  --font-size-small: 1.4rem;
+  --font-size-medium: 1.8rem;
+  --font-size-large: 2.2rem;
+  --font-size-xlarge: 3rem;
+  --font-size-xxlarge: 3.8rem;
+
+  --color-dark: #000;
+  --color-background: #FFF;
+  --color-text: #555;
+
+  --color-brand-primary: #1B1B96;
+  --color-brand-primary-light: #EFEFFD;
+  --color-brand-primary-light-2: #D6D6FA;
+
+  --radius-base: 1rem;
+  --radius-large: 2rem;
+
+  --transition-effect: cubic-bezier(.12,.97,.57,1.41);
+}
+
+::selection {
+  background-color: var(--color-brand-primary);
+  color: var(--color-background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  cursor: default;
+
+  @include desktop-large {
+    font-size: 12px;
+  }
+
+  @include desktop-xlarge {
+    font-size: 13px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-family: var(--font-family);
+  font-display: swap;
+}
+
+#app {
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-effect: cubic-bezier(0, 0, 0, 0);
+  }
+
+  .animate {
+    animation: none;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
