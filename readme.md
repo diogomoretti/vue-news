@@ -6,6 +6,9 @@
 
 🇧🇷 *Este Readme está em português.*
 
+> [!NOTE]
+> Este projeto tem apenas 1 commit (ou poucos) porque era um projeto privado. E quando foi aberto o repositório, foram zerados os commits.
+
 ## Tecnologias utilizadas
 
 - [**Vue 3**](https://vuejs.org/): Como framework front-end principal. E utilizando a Composition API, que é mais usada atualmente.
